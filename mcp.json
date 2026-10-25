@@ -1,0 +1,51 @@
+{
+  "mcpServers": {
+    "luigi-galvani-ai": {
+      "command": "cargo",
+      "args": [
+        "run",
+        "--release",
+        "--quiet"
+      ],
+      "env": {
+        "RUST_LOG": "info",
+        "TITAN_PROTOCOL": "GALVANI",
+        "TARGET_CHAIN": "Sui",
+        "FIPS_203_LEVEL": "ML-KEM-768",
+        "FIPS_204_LEVEL": "ML-DSA-65"
+      },
+      "tools": [
+        {
+          "name": "simulate_sciatic_nerve_excitation",
+          "description": "Computes threshold voltage and muscle twitch latency triggered by bimetallic contact arc",
+          "parameters": {
+            "type": "object",
+            "properties": {
+              "stimulus_millivolts": {
+                "type": "number"
+              }
+            },
+            "required": [
+              "stimulus_millivolts"
+            ]
+          }
+        },
+        {
+          "name": "model_membrane_resting_potential",
+          "description": "Solves ionic concentration gradient equilibrium generating cellular electrical readiness",
+          "parameters": {
+            "type": "object",
+            "properties": {
+              "intracellular_k_meq": {
+                "type": "number"
+              }
+            },
+            "required": [
+              "intracellular_k_meq"
+            ]
+          }
+        }
+      ]
+    }
+  }
+}
